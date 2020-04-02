@@ -1,0 +1,63 @@
+.ct {
+  &-top-leve-game {
+    .game-filter {
+      &-menu {
+        ul {
+          .display-flex();
+          .align-items(center);
+          overflow-x: auto;
+          overflow-y: hidden;
+          white-space: nowrap;
+          li {
+            margin-right: 30px;
+            display: inline-block;
+            padding: 10px 0px;
+            color: @leittgray;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            cursor: pointer;
+            &:hover {
+              color: @black;
+            }
+            &.active {
+              color: @black;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .game-filter-container {
+      margin: 0 -10px;
+      .tab-content{
+        display: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @media (min-width: @sizes[extra-large]) {
+          padding-bottom: 20px;
+        }
+        &.active{
+          .display-flex();
+          .align-items(start);
+          .flex-wrap(nowrap);
+          overflow-x: auto;
+        }
+      }
+    }
+    &-free {
+      .game-filter-container {
+        .tab-content{
+          padding-bottom: 0px;
+          &.active{
+            .flex-wrap(wrap);
+            overflow-x: hidden;
+          }
+          .casino-card-top-game {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

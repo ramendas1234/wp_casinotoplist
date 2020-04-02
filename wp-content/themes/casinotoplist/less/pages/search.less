@@ -1,0 +1,66 @@
+.serach-results{
+  main {
+    padding-top: 0;
+  }
+  &-header {
+    background-color: @gray;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    .page-header {
+      .display-flex();
+      .align-items(center);
+      .page-title {
+        color: @black;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+      }
+      .page-description {
+        color: @blue;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  .result-count {
+    color: @black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .result-item {
+    .display-flex();
+    .align-items(flex-start);
+    .justify-content-space-between();
+    border-bottom: 1px solid @border-gray;
+    margin: 20px 0;
+    padding-bottom: 10px;
+    .info {
+      padding-right: 15px;
+      h6 {
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 5px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140.62%;
+        margin-bottom: 5px;
+      }
+      a {
+        font-size: 14px;
+        color: @blue;
+      }
+    }
+    .cta {
+      min-width: 161px;
+      padding: 7px 15px;
+    }
+  }
+}
+.pagination-bar {
+  .display-flex();
+  .align-items(center);
+  .justify-content-space-between();
+  margin-top: 50px;
+}

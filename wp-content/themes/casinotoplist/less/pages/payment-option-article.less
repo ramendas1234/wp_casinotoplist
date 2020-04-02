@@ -1,0 +1,127 @@
+
+.ct {
+  &-payment-option-article {
+    .article-top-content {
+      .display-flex();
+      .align-items(start);
+      margin-bottom: 20px;
+      .icon-center {
+        .display-flex();
+        .justify-content-center();
+        .align-items(center);
+        margin-bottom: 15px;
+        width: 175px;
+        float: left;
+        @media (min-width: @sizes[large]) {
+          margin-bottom: 0px;
+        }
+      }
+      .text-content {
+        max-width: 645px;
+        padding-left: 20px;
+        overflow: hidden;
+        h4 {
+          margin-bottom: 10px;
+          color: @black;
+          font-weight: 700;
+        }
+        p {
+          color: @black;
+          line-height: 22px;
+        }
+      }
+      .row {
+        margin: 0 -10px;
+        [class^=col-] {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.paypal-support-table {
+  margin-bottom: 30px;
+  .table-row {
+    .display-flex();
+    .align-items(center);
+    .flex-wrap(wrap);
+    background: @gray;
+    padding: 0 5px;
+    &:nth-child(2n) {
+      background: @white;
+    }
+    .table-column {
+      .display-flex();
+      .align-items(center);
+      .justify-content-center();/**/
+      padding: 10px 5px;
+      width: 25%;
+      @media (min-width: @sizes[large]) {
+        width: 15%;
+     }
+      &.button-col {
+        .display-flex();
+        .align-items(flex-end);
+        .justify-content-space-between();
+        width: 100%;
+        @media (min-width: @sizes[large]) {
+           width: 38%;
+        }
+        .cta {
+          min-width: auto;
+          max-width: 120px;
+          width: 100%;
+          margin: 0 10px;
+          padding: 5px 10px;
+          font-size: 10px;
+          @media (min-width: @sizes[small]) {
+            padding: 6px 15px;
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+        margin: 0;
+        color: @black;
+        font-weight: 500;
+        white-space: nowrap;
+        line-height: 20px;
+        strong {
+          font-weight: 700;
+        }
+      }
+      &.bonus-col {
+        p {
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+      &.img-col {
+        img {
+          width: 65px;
+          .border-radius(5px);
+          @media (min-width: @sizes[small]) {
+            width: 110px;
+            max-height: 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-panel {
+  h6 {
+    margin: 0 0 10px 0;
+  }
+  .casino-card {
+    .img-panel {
+      height: 100px;
+    }
+    .info-panel {
+      padding: 10px;
+    }
+  }
+}

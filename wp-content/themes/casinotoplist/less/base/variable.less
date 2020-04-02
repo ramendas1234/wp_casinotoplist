@@ -1,0 +1,119 @@
+// Theme Color
+@blue          : #3D29B1;
+@dark-blue     : #2C1D84;
+@light-blue    : #BDB4EE;
+@orange        : #FF3F01;
+@dark-orange   : #bb3c08;
+@light-orange  : #FF8126;
+@dimgray       : #575757;
+@leittgray     : #7E7E7E;
+@white         : #FFFFFF;
+@black         : #000000;
+
+@mel-rose      : #b4a8fb;
+@purple        : #6454c1;
+@gray          : #f5f6fc;
+@light-gray    : #D8D4EF;
+@dimblue       : #523EC8;
+@lighter-blue  : #C4BFEC;
+@brown         : #a91515;
+@light-sky     : #eae7fd;
+@lighter-gray  : #ABA5CE;
+@dimmer-gray   : #EBE9F7;
+@light-black   : #232323;
+@border-gray   : #E4E4E4;
+
+@paypal        : #F8FDFF;
+@nateller      : #FBFFF5;
+@mastercard    : #FFF9F0;
+@lighter-orange: #FFDCC3;
+@lighten-orange: #FFF2E9;
+@bluish-gray   : #D5DAF3;
+@gray-white    : #F6EAE7;
+@darker-blue   : #2D1D8A;
+@input-bgcolor : #E9E7FD;
+
+// Media
+@sizes: {
+  extra-small: 320px;
+  small: 576px;
+  medium: 768px;
+  large: 992px;
+  extra-large: 1200px;
+}
+
+// Mixins
+.border-radius(@value) {
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  border-radius: @value;
+}
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.flex-flow {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.align-items (@value) {
+  -webkit-box-align: @value;
+  -ms-flex-align: @value;
+  align-items: @value;
+}
+.justify-content-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.justify-content-flex-start {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.justify-content-space-evenly {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.flex-direction-row  {
+  -webkit-box-orient : horizontal;
+  -webkit-box-direction : normal;
+  -ms-flex-direction : row;
+  flex-direction : row
+}
+.flex-direction-column {
+  -webkit-box-orient : vertical;
+  -webkit-box-direction : normal;
+  -ms-flex-direction : column;
+  flex-direction : column;
+}
+.flex-wrap (@value) {
+  -ms-flex-wrap: (@value);
+      flex-wrap: (@value);
+}
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition: @transition;
+	-ms-transition: @transition; 
+  -o-transition: @transition;  
+  transition: @transition
+}

@@ -1,0 +1,271 @@
+.ct {
+  &-casino-match {
+    padding: 30px 0;
+    @media (min-width: @sizes[large]) {
+      padding: 50px 0 35px;
+    }
+    .casino-match-options {
+      .match-holder {
+        margin: 0 10px;
+        .match-header {
+          margin-bottom: 20px;
+          @media (min-width: @sizes[small]) {
+            margin-bottom: 45px;
+          }
+          h2 {
+            margin-bottom: 50px;
+            font-size: 24px;
+            @media (min-width: @sizes[medium]) {
+              font-size: 26px;
+              line-height: 39px;
+            }
+          }
+          p {
+            font-size: 16px;
+            line-height: 30px;
+            color: @black;
+            margin-bottom: 0;
+            margin-top: 20px;
+            @media (min-width: @sizes[small]) {
+              margin-top: 0;
+            }
+            @media (min-width: @sizes[medium]) {
+              font-size: 20px;
+            }
+            span {
+              color: @blue;
+              font-weight: 700;
+            }
+            // &.step-count {
+            //   position: absolute;
+            //   left: 50%;
+            //   top: 7px;
+            //   transform: translateX(-50%);
+            //   margin: 0;
+            //   line-height: 1;
+            // }
+          }
+          .casino-match-steps {
+            .display-flex();
+            .align-items(center);
+            .justify-content-space-between();
+            position: relative;
+            margin-bottom: 50px;
+            .btn {
+              padding: 0px 10px;
+              min-width: 77px;
+              max-width: 77px;
+              font-size: 12px;
+              color: @white;
+              display: block;
+              transition: all .5s;
+              text-align: center;
+              font-weight: 600;
+              .border-radius(5px);
+              background: @blue;
+              @media (min-width: @sizes[medium]) {
+                padding: 11px 10px;
+                min-width: 175px;
+                max-width: 175px;
+                line-height: 18px;
+              }
+            }
+            .step-mover {
+              width: 100%;
+              padding: 0 27px;
+              ul {
+                .display-flex();
+                .align-items(center);
+                .justify-content-space-between();
+                position: relative;
+                &:after {
+                  position: absolute;
+                  content: "";
+                  left: 25px;
+                  right: 25px;
+                  top: 12px;
+                  height: 1px;
+                  background: @lighter-blue;
+                  opacity: 0.3;
+                  z-index: -1;
+                }
+                li {
+                  a {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: @black;
+                    .display-flex();
+                    .align-items(center);
+                    .flex-direction-column();
+                    span {
+                      width: 24px;
+                      height: 24px;
+                      .border-radius(100%);
+                      background: @gray;
+                      border: 2px solid @blue;
+                      .display-flex();
+                      .align-items(center);
+                      .justify-content-center();
+                      font-weight: 600;
+                      font-size: 14px;
+                      line-height: 21px;
+                      color: @blue;
+                      margin-bottom: 5px;
+                    }
+                  }
+                  &.current {
+                    a{
+                      color: @blue;
+                      font-weight: 700;
+                    }
+                    span {
+                      background: @blue;
+                      color: @white;
+                    }
+                  }
+                  &.visited {
+                    span {
+                      background: @blue;
+                      color: @white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .holder-wrapper {
+        .display-flex();
+        .flex-wrap(wrap);
+        .justify-content-center();
+        .casino-match-item {
+          text-align: center;
+          margin-bottom: 20px;
+          &-full {
+            width: 100%;
+          }
+          .match-card {
+            background: @white;
+            border: 1px solid @lighter-blue;
+            box-sizing: border-box;
+            .border-radius(5px);
+            position: relative;
+            .display-flex();
+            .align-items(center);
+            .justify-content-center();
+            width: 110px;
+            height: 110px;
+            margin-left: 7px;
+            margin-right: 7px;
+            @media (min-width: @sizes[small]) {
+              width: 131px;
+              height: 131px;
+              margin-left: 10px;
+              margin-right: 10px;
+            }
+            @media (min-width: @sizes[medium]) {
+              width: 150px;
+              height: 150px;
+              margin-left: 15px;
+              margin-right: 15px;
+            }
+            @media (min-width: @sizes[extra-large]) {
+              margin-left: 27px;
+              margin-right: 27px;
+              width: 163px;
+              height: 163px;
+            }
+            img {
+              width: 60px;
+              height: 60px;
+              @media (min-width: @sizes[small]) {
+                width: 75px;
+                height: 75px;
+              }
+              @media (min-width: @sizes[medium]) {
+                width: 113px;
+                height: 113px;
+              }
+            }
+            label {
+              position: absolute;
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              top: 0;
+              right: 0;
+              width: 100%;
+              height: 100%;
+              input[type="radio"] {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              .checkmark {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                height: 18.64px;
+                width: 18.64px;
+                background: @gray ;
+                border: 1px solid @lighter-blue;
+                border-radius: 50%;
+                .transition(all 0.3s);
+                @media (min-width: @sizes[medium]) {
+                  height: 24.64px;
+                  width: 24.64px;
+                }
+                &:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                  top: 3px;
+                  left: 3px;
+                  width: 11px;
+                  height: 11px;
+                  border-radius: 50%;
+                  background: #3d29b1;
+                  @media (min-width: @sizes[medium]) {
+                    top: 5px;
+                    left: 5px;
+                    width: 13px;
+                    height: 13px;
+                  }
+                }
+              }
+              input:checked~.checkmark {
+                background-color: @gray;
+                border-color: @blue;
+                &:after {
+                  display: block;
+                }
+              }
+            }
+          }
+          .card-title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: @black;
+            margin: 10px 0 0;
+            @media (min-width: @sizes[small]) {
+              font-size: 16px;
+            }
+          }
+          &.selected {
+            .card-title {
+              color: @blue;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

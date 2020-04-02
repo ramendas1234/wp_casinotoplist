@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+  @media (min-width: @sizes[extra-small]) {
+    width: 100%;
+  }
+  @media (min-width: @sizes[small]) {
+    width: 540px;
+  }
+  @media (min-width: @sizes[medium]) {
+    width: 720px;
+  }
+  @media (min-width: @sizes[large]) {
+    width: 950px;
+  }
+  @media (min-width: @sizes[extra-large]) {
+    width: 1140px;
+  }
+  &-fluid {
+    padding: 0 10px;
+  }
+  &-small {
+    max-width: 1000px;
+  }
+}
+.row {
+  margin: 0 -10px;
+  position: relative;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  [class^=col-] {
+    padding: 0 10px;
+    float: left;
+    width: 100%;
+  }
+  &-flex {
+    .display-flex();
+    .flex-flow();
+    .align-items(stretch);
+    &-end {
+      .align-items(flex-end);
+    }
+    &-center {
+      .align-items(center);
+    }
+    &-nowrap {/**/
+      .flex-wrap(wrap);
+      @media (min-width: @sizes[large]) {
+        .flex-wrap(nowrap);
+      }
+    }
+    &-justify {
+      .justify-content-space-between();
+    }
+    [class^=col-] {
+      float: none;
+    } 
+  }
+  @media (min-width: @sizes[small]) {
+    .generate-columns(12);
+    .generate-columns(@n, @i: 1) when (@i =< @n) {
+      .col-sm-@{i} {
+        width: (@i * 100% / @n);
+      }
+      .generate-columns(@n, (@i + 1));
+    }
+  }
+  @media (min-width: @sizes[medium]) {
+    .generate-columns(12);
+    .generate-columns(@n, @i: 1) when (@i =< @n) {
+      .col-md-@{i} {
+        width: (@i * 100% / @n);
+      }
+      .generate-columns(@n, (@i + 1));
+    }
+  }
+  @media (min-width: @sizes[large]) {
+    .generate-columns(12);
+    .generate-columns(@n, @i: 1) when (@i =< @n) {
+      .col-lg-@{i} {
+        width: (@i * 100% / @n);
+      }
+      .generate-columns(@n, (@i + 1));
+    }
+  }
+  
+}
+
+.ct-article-page {
+  .container {
+    padding: 0 15px;
+  }
+  .row {
+    margin: 0 -15px;
+    [class^=col-] {
+      padding: 0 15px;
+    }
+  }
+  .col-lg-9 {
+    max-width: 840px;
+  }
+  .col-lg-3 {
+    min-width: 300px;
+  }
+}

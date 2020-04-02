@@ -1,0 +1,340 @@
+.ct {
+  &-best-online-casinos {
+    .casino-card-vertical {
+      display: block;
+      @media (min-width: @sizes[medium]) { 
+        .display-flex();
+        .flex-wrap(wrap);
+      }
+      .img-panel {
+        height: 200px;
+        width: 100%;
+        @media (min-width: @sizes[medium]) { 
+          height: 90px;
+          width: 180px;
+        }
+      }
+      .info-panel {
+        display: block;
+        padding: 15px 0px;
+        width: 100%;
+        @media (min-width: @sizes[medium]) { 
+          width: calc(100% - 180px);
+        }
+        h6 {
+          margin-bottom: 10px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          padding: 5px 8px 10px;
+          .border-radius(5px);
+          span {
+            color: @leittgray;
+            margin-bottom: 3px;
+            display: block;
+            white-space: nowrap;
+          }
+          &.exclusive {
+            color: @blue;
+            span {
+              color: @blue;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+          &.high {
+            color: @white;
+            background: @blue;
+            span {
+              color: @white;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+        }
+        @media (min-width: @sizes[small]) { 
+          .display-flex();
+          padding: 15px 20px;
+          h6 {
+            margin-bottom: 0px;
+            text-align: left;
+          }
+        }
+      }
+      .cta {
+        margin-left: 0px;
+        min-width: 100%;
+        width: 100%;
+        display: block;
+        margin: 7px 0;
+        @media (min-width: @sizes[small]) { 
+          margin-left: 0px;
+          min-width: 145px;
+        }
+        @media (min-width: @sizes[large]) { 
+          margin: 0 0 0 10px;
+        }
+        @media (min-width: @sizes[extra-large]) {
+          margin: 0 0 0 20px;
+          min-width: 200px;
+        }
+        &-outline {
+          display: none;
+          @media (min-width: @sizes[large]) { 
+            display: block;
+          }
+        }
+      }
+    }
+    &.no-deposit-casinos {
+      .display-flex();
+      .flex-wrap(wrap);
+      margin: 0 -8px 30px;
+      .img-panel {
+        height: 50px;
+        width: 50px;
+        min-width: auto;
+      }
+      .info-panel {
+        width: calc(100% - 50px);
+        padding: 0px 0px 0 15px;
+        .cta {
+          margin: 0px;
+          min-width: 86px;
+          padding: 5px 10px;
+          font-size: 10px;
+        }
+        h6 {
+          font-size: 10px;
+          color: @light-black;
+          padding: 0;
+          span {
+            font-size: 10px;
+            margin-bottom: 5px;
+            color: @light-black;
+          }
+          strong {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    &.high-roller-casinos {
+      .casino-card-high-roller {
+        .align-items(start);
+        padding: 20px 10px;
+        .info-panel {
+          .align-items(start);
+          padding: 0px 0 0px 20px;
+          h6 {
+            padding-top: 0;
+          }
+        }
+        .card-right-panel {
+          .flex-direction-column();
+          .align-items(center);
+          .justify-content-center();
+          .card-ratings {
+            margin-bottom: 15px;
+            padding: 9px 5px;
+          }
+          .cta {
+            margin-left: 0;
+          }
+        }
+        .card-mid-panel {
+          max-width: 455px;
+          min-width: 455px;
+          h6 {
+            padding: 0;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            color: @leittgray;
+            margin-bottom: 5px;
+          }
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            color: @black;
+          }
+          ul {
+            .display-flex();
+            .align-items(center);
+            .justify-content-space-between();
+            margin: 0;
+            padding: 0;
+            li {
+              font-size: 12px;
+              line-height: 18px;
+              color: @leittgray;
+              position: static;
+              strong {
+                display: block;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+                color: @black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.online-casino-header {
+  background: @gray;
+  margin-bottom: 25px;
+  position: relative;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 4000px;
+    height: 100%;
+    background: @gray;
+  }
+  &:before {
+    left: -3999px;
+  }
+  &:after {
+    right: -3999px;
+  }
+  .ct-section-title {
+    padding: 7px 0;
+    .display-flex();
+    .align-items(center);
+    .justify-content-space-between();
+    .flex-direction-column();
+    @media (min-width: @sizes[medium]) { 
+      .flex-direction-row();
+    }
+    h6 {
+      margin-bottom: 10px;
+      @media (min-width: @sizes[medium]) { 
+        margin-bottom: 0;
+      }
+    }
+    .right-filter {
+      .display-flex();
+      .align-items(center);
+      .flex-direction-column();
+      @media (min-width: @sizes[small]) {
+        .flex-direction-row();
+      }
+      .select-style {
+        margin-left: 0px;
+        margin-top: 10px;
+        @media (min-width: @sizes[small]) {
+          margin-left: 15px;
+          margin-top: 0px;
+        }
+      }
+    }
+    .filter-btn {
+      width: 200px;
+      .border-radius(4px);
+      border: 1px solid @lighter-blue;
+      height: 36px;
+      background: @gray;
+      padding: 10px;
+      color: @blue;
+      font-size: 12px;
+      line-height: 1.4;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      &:after {
+        position: absolute;
+        content: "";
+        right: 10px;
+        top: 12px;
+        transform: rotate(90deg);
+        background: @gray url(../images/icon/arrow-blue.svg) no-repeat;
+        width: 12px;
+        height: 16px;
+        z-index: -1;
+      }
+    }
+  }
+  .filter-dropdown {
+    background: @light-sky;
+    padding: 7px 0;
+    display: none;
+    position: relative;
+    &:before, 
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 4000px;
+      height: 100%;
+      background: @light-sky;
+      z-index: 1;
+    }
+    &:before {
+      left: -3999px;
+    }
+    &:after {
+      right: -3999px;
+    }
+    &-bar {
+      .display-flex();
+      .align-items(center);
+      .flex-direction-column();
+      @media (min-width: @sizes[medium]) { 
+        .flex-direction-row();
+      }
+      .select-style {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        @media (min-width: @sizes[medium]) { 
+          margin-left: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.select-style {
+  width: 200px;
+  .border-radius(4px);
+  border: 1px solid @lighter-blue;
+  height: 36px;
+  background: @gray;
+  padding: 0px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  &:after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 12px;
+    transform: rotate(90deg);
+    background: @gray url(../images/icon/arrow-blue.svg) no-repeat;
+    width: 12px;
+    height: 16px;
+    z-index: -1;
+  }
+  select {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: @blue;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}

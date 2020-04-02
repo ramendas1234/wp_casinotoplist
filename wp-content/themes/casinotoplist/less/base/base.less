@@ -1,0 +1,56 @@
+// CUSTOM THEME
+* {
+  box-sizing: border-box;
+}
+a, button, input { transition: all ease-in-out 250ms;}
+body {
+  // font-family: 'Quicksand', sans-serif;
+  // font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+}
+main {
+  padding: 20px 0;
+  @media (min-width: @sizes[medium]) {
+    padding: 30px 0;
+  }
+}
+input {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+::placeholder {
+  color: @white;
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a, a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+// animation
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+  

@@ -1,0 +1,70 @@
+.ct {
+  &-testimonial {
+    padding: 30px 0 60px;
+    .testimonial-slider {
+      margin: 0 -10px;
+      .casino-card-testimonial {
+        min-height: 285px;
+        @media (min-width: @sizes[small]) {
+          min-height: 355px;
+        }
+        .author-pic {
+          width: 72px;
+          height: 72px;
+          .border-radius(100%);
+          margin-bottom: 22px;
+          img {
+            width: 72px;
+            height: 72px;
+            .border-radius(100%);
+            object-fit: cover;
+            border: 2px solid @light-gray;
+          }
+        }
+        .author-title {
+          color: @black;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 140.62%;
+          margin-bottom: 10px;
+        }
+        .testimonial-content {
+          // padding-bottom: 50px;
+          p {
+            color: @leittgray;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 140.62%;
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .slick-dots {
+        bottom: -40px;
+        li {
+          margin: 0 3px;
+          button {
+            width: 10px;
+            height: 10px;
+            .border-radius(100%);
+            padding: 0;
+            background: @light-gray;
+            .transition(all 0.3s);
+            &:before {
+              display: none;
+            }
+          }
+          &.slick-active {
+            button {
+              background: @blue;
+            }
+          }
+        }
+      }
+    }
+    h6 {
+      margin-bottom: 5px;
+    }
+  }
+}

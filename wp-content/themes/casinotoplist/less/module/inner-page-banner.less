@@ -1,0 +1,203 @@
+.ct {
+  &-inner-banner {
+    margin-bottom: 0px;
+    .banner-wrapper {
+      background-image: linear-gradient(#6958d2,#4b38b8 52%,#2d1d8a);
+      padding-top: 35px;
+      padding-bottom: 35px;
+      min-height: 250px;
+      position: relative;
+      .display-flex();
+      .align-items(center);
+      @media (min-width: @sizes[extra-large]) { 
+        min-height: 225px;
+        // max-height: 225px;
+      }
+      .image-holder {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: .2;
+      }
+      .banner-content {
+        h1 {
+          color: @white;
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 39px;
+          margin-bottom: 5px;
+        }
+        p {
+          line-height: 22px;
+          max-width: none;
+          color: @white;
+          font-size: 14px;
+          margin-bottom: 0;
+          @media (min-width: @sizes[medium]) { 
+            max-width: 650px;
+          }
+        }
+
+      }
+      &-big {
+        min-height: 180px;
+        background-image: none;
+        @media (min-width: @sizes[small]) {
+          min-height: 250px;
+        }
+        @media (min-width: @sizes[medium]) { 
+          min-height: 400px;
+        }
+        .image-holder {
+          opacity: 1;
+        }
+      }
+      &-button {
+        .align-items(flex-end);
+      }
+    }
+    &.review-banner {
+      min-height: 340px;
+      .banner-wrapper {
+        padding: 0;
+        max-height: none;
+      }
+      .review-banner-content {
+        .display-flex();
+        .align-items(start);
+        .justify-content-space-between();
+        padding: 40px 270px 40px 0;
+        position: relative;
+        .casino-brand {
+          width: 205px;
+          height: 205px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .review-cont {
+          width: calc(100% - 205px);
+          padding-left: 65px;
+          padding-right: 20px;
+          position: relative;
+          h1 {
+            color: @white;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 39px;
+            margin-bottom: 0px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            color: @white;
+            font-weight: 400;
+            margin-bottom: 30px;
+            margin-top: 15px;
+            &.terms {
+              font-size: 10px;
+              line-height: 14px;
+              margin-bottom: 0px;
+              margin-top: 0px;
+              a {
+                color: @white;
+                font-weight: 700;
+              }
+            }
+          }
+          .cta {
+            min-width: 260px;
+            margin-bottom: 20px;
+          }
+          .card-ratings {
+            min-width: 151px;
+            background: @gray-white;
+            padding: 4px 5px;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            figure {
+              img {
+                width: 15px;
+              }
+            }
+          }
+        }
+        .welcome-bonus-ban {
+          background: @dimblue;
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 270px;
+          height: 100%;
+          padding: 30px 13px;
+          text-align: center;
+          &:after {
+            position: absolute;
+            content: "";
+            background: url(../images/gift-icon-big.svg) no-repeat;
+            width: 153px;
+            height: 165px;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+          }
+          p {
+            color: @white;
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 10px;
+            .icon {
+              -webkit-filter: brightness(0) invert(1);
+              filter: brightness(0) invert(1);
+              vertical-align: sub;
+            }
+            &.bonus-text {
+              .display-flex();
+              .align-items(center);
+              .justify-content-space-between();
+              font-size: 12px;
+            }
+          }
+          h4 {
+            color: @white;
+            margin-bottom: 10px;
+          }
+          .bonus-code {
+            background: @darker-blue;
+            padding: 10px 20px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -49px;
+            height: 49px;
+            p {
+              margin-bottom: 0;
+              line-height: 29px;
+              strong {
+                font-weight: 700;
+                color: @orange;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.high-roller-ban {
+      .banner-wrapper {
+        min-height: 340px;
+        .image-holder {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.left {
+  float: none;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  @media (min-width: @sizes[small]) {
+    float: left;
+    margin-right: 20px;
+  }
+}
+.right {
+  float: none;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  @media (min-width: @sizes[small]) {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+.tab-hide {
+  display: none;
+  @media (min-width: @sizes[large]) {
+    display: block;
+  }
+}
+
+.brand-logo {
+  .display-flex();
+  .align-items(center);
+  background: @dimblue;
+  .border-radius(5px);
+  width: 129px;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: @white;
+  margin-right: 25px;
+  i {
+    margin-right: 5px;
+  }
+}
+
+.mt-10 {
+  margin-top: 10px;
+  overflow: hidden;
+}
+.mb-10 {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.mt-20 {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.mb-20 {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.mt-25 {
+  margin-top: 25px;
+  overflow: hidden;
+}
+.mb-25 {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.mt-30 {
+  margin-top: 20px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-top: 30px;
+  }
+}
+.mb-30 {
+  margin-bottom: 20px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-bottom: 30px;
+  }
+}
+.mt-45 {
+  margin-top: 25px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-top: 45px;
+  }
+}
+.mb-45 {
+  margin-bottom: 25px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-bottom: 45px;
+  }
+}
+.mt-50 {
+  margin-top: 30px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-top: 50px;
+  }
+}
+.mb-50 {
+  margin-bottom: 30px;
+  overflow: hidden;
+  @media (min-width: @sizes[large]) {
+    margin-bottom: 50px;
+  }
+}
+.p-30 {
+  padding: 30px 0;
+}
+.pt-30 {
+  padding-top: 30px;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.card-ratings {
+  min-width: 197px;
+  background: rgba(255, 129, 38, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 4px 5px;
+  .display-flex();
+  .align-items(center);
+  .justify-content-center();
+  > div {
+    line-height: 1;
+    .display-flex();
+    .align-items(baseline);
+    .justify-content-center();
+    font-size: 14px;
+  }
+  .rating-value {
+    margin-right: 7px;
+    color: @light-orange;
+    .result {
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+  figure {
+    display: inline-block;
+    margin-left: 2px;
+  }
+}
